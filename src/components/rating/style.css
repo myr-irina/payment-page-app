@@ -1,0 +1,78 @@
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 26px auto 12px;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* .rating__button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  background: url('./../../images/star.svg') center no-repeat;
+}
+
+.on {
+  background: url('./../../images/star-checked.svg') center no-repeat;
+}
+.off {
+  background: url('./../../images/star.svg') center no-repeat;
+} */
+
+.rating__stars {
+  position: relative;
+  display: block;
+  font-size: 0;
+}
+.rating__stars::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  background: url(../../images/star.svg) transparent no-repeat center;
+}
+.rating__stars span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+}
+.rating__stars span::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  background: url(../../images/star-checked.svg) transparent no-repeat center;
+}
+
+.form__rating-label {
+  display: block;
+  width: 37px;
+  height: 33px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.form__rating-label:first-child {
+  margin-right: 0;
+}
+
+/* .form__rating-input:checked,
+.form__rating-label .form__star-image,
+.form__rating-input:focus,
+.form__rating-label .form__star-image,
+.form__rating-label:hover .form__star-image,
+.form__rating-label:hover,
+.form__rating-label .form__star-image {
+  fill: #ff9000;
+}
+.form__star-image {
+  fill: #c7c7c7;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+} */
