@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import starIcon from './../../images/star.svg';
 import RatingIcon from '../rating-icon/rating-icon';
 import './style.css';
 
-function Rating({ onFeedbackOpen }) {
+function Rating({ onFeedbackOpen, onFeedbackClose }) {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
 
@@ -18,14 +17,17 @@ function Rating({ onFeedbackOpen }) {
     setRating(index);
   };
 
-  const onDoubleClick = index => {
-    // setRating(0);
-    // setHover(0);
+  const onDoubleClick = () => {
+    setRating(0);
+    setHoverRating(0);
+    onFeedbackClose();
   };
+
+  // ...(rating === 1 ? { onDoubleClick } : {})
 
   return (
     <div className='rating'>
-      {[...Array(5).keys()].map(index => {
+      {[1, 2, 3, 4, 5].map(index => {
         return (
           <RatingIcon
             key={index}
@@ -35,7 +37,8 @@ function Rating({ onFeedbackOpen }) {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             onSaveRating={onSaveRating}
-            onFeedbackOpen={onFeedbackOpen}
+            onOpen={onFeedbackOpen}
+           { ...(index === 1 ? { onDoubleClick } : {})}
           />
         );
       })}

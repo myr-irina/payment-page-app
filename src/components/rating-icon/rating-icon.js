@@ -9,7 +9,8 @@ function RatingIcon(props) {
     onMouseEnter,
     onMouseLeave,
     onSaveRating,
-    onFeedbackOpen,
+    onOpen,
+    onDoubleClick,
   } = props;
 
   const fill = React.useMemo(() => {
@@ -33,12 +34,13 @@ function RatingIcon(props) {
   return (
     <div
       className='rating-icon'
-      onMouseEnter={() => onMouseEnter(index)}
-      onMouseLeave={() => onMouseLeave()}
+      // onMouseEnter={() => onMouseEnter(index)}
+      // onMouseLeave={() => onMouseLeave()}
       onClick={() => {
         onSaveRating(index);
-        onFeedbackOpen();
+        onOpen();
       }}
+      onDoubleClick={onDoubleClick}
     >
       <StarIcon fill={fill} stroke={stroke} />
     </div>

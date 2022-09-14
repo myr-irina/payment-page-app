@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import CardList from '../card-list/card-list';
 import Rating from '../rating/rating';
 import Feedback from '../feedback/feedback';
@@ -8,26 +8,26 @@ import closeBtn from './../../images/close-button.svg';
 
 function PaymentForm() {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
+  const [tips, setTips] = useState(0);
 
-  
   const onMouseClick = () => {
     setIsFeedbackOpen(true);
   };
 
-  const onDoubleClick = () => {
-    setIsFeedbackOpen(false);
+  const onDoubleClick = () => { 
+      setIsFeedbackOpen(false); 
   };
 
   return (
     <form className='form'>
       <div className='input-block'>
-        <input className='input' type='text' />
+        <input className='input' type='number' value={tips} onChange={(e) => setTips(e.target.value)}/>
         <button type='button' className='close-button'>
           <img src={closeBtn} alt='кнопка закрытия' />
         </button>
       </div>
-      <CardList />
-      <Rating onFeedbackOpen={onMouseClick} />
+      <CardList setTips={setTips} />
+      <Rating onFeedbackOpen={onMouseClick} onFeedbackClose={onDoubleClick} />
       <Feedback isOpen={isFeedbackOpen} />
       <ButtonGroup />
       <label>
