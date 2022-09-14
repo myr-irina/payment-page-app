@@ -23,8 +23,6 @@ function Rating({ onFeedbackOpen, onFeedbackClose }) {
     onFeedbackClose();
   };
 
-  // ...(rating === 1 ? { onDoubleClick } : {})
-
   return (
     <div className='rating'>
       {[1, 2, 3, 4, 5].map(index => {
@@ -38,7 +36,7 @@ function Rating({ onFeedbackOpen, onFeedbackClose }) {
             onMouseLeave={onMouseLeave}
             onSaveRating={onSaveRating}
             onOpen={onFeedbackOpen}
-           { ...(index === 1 ? { onDoubleClick } : {})}
+            {...(index === 1 ? { onDoubleClick } : {})}
           />
         );
       })}

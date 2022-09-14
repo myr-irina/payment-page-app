@@ -1,1 +1,1 @@
-export const FEE_RATE = 0.07;
+export const FEE_RATE = 0.05;
