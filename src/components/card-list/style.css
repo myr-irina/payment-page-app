@@ -23,6 +23,7 @@
 
 .card_type_clicked {
   background: var(--secondary-bg-color);
+  color: #ffffff;
 }
 
 .swiper-container {

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './style.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import numberFormat from '../../utils/number-format';
 
 function CardList({ setTips }) {
- 
   const [activeButtonValue, setActiveButtonValue] = useState(0);
 
   function handleClick(e) {
@@ -12,7 +12,7 @@ function CardList({ setTips }) {
     console.log({ buttonValue });
     setTips(buttonValue);
     setActiveButtonValue(buttonValue);
-  } 
+  }
   //вынести в utils const
   const arr = [100, 250, 500, 1000, 2500];
 
@@ -40,7 +40,7 @@ function CardList({ setTips }) {
             type='button'
             onClick={handleClick}
           >
-            {value} &#8381;
+            {numberFormat(value)}
           </button>
         </SwiperSlide>
       ))}
