@@ -10,7 +10,8 @@ import { FEE_RATE } from '../const';
 
 function PaymentForm() {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
-  const [tips, setTips] = useState(0);
+  const [tips, setTips] = useState('0');
+  const [rating, setRating] = useState(0);
 
   const onMouseClick = () => {
     setIsFeedbackOpen(true);
@@ -21,21 +22,28 @@ function PaymentForm() {
   };
 
   const onCloseButton = () => {
-    setTips(0);
+    setTips('0');
+  };
+
+  const onFormSubmit = e => {
+    e.preventDefault();
+    setTips('0');
+    setRating(0);
+    onDoubleClick();
   };
 
   const rub = parseInt(tips * FEE_RATE);
-  const kop = +(((tips * FEE_RATE) % rub) * 100);
+  const kop = Math.trunc(((tips * FEE_RATE) % rub) * 100);
 
   return (
-    <form className='form' type='submit'>
+    <form className='form' type='submit' onSubmit={onFormSubmit}>
       <div className='input-block'>
         <input
           className='input-tips'
-          type='number'
-          value={tips}
+          type='text'
+          value={tips.includes('₽') ? tips : `${tips} ₽`}
           onChange={e => {
-            setTips(+e.target.value);
+            setTips(e.target.value);
           }}
         />
 
@@ -44,7 +52,12 @@ function PaymentForm() {
         </button>
       </div>
       <CardList setTips={setTips} />
-      <Rating onFeedbackOpen={onMouseClick} onFeedbackClose={onDoubleClick} />
+      <Rating
+        onFeedbackOpen={onMouseClick}
+        onFeedbackClose={onDoubleClick}
+        rating={rating}
+        setRating={setRating}
+      />
       <Feedback isOpen={isFeedbackOpen} />
       <ButtonGroup setTips={setTips} />
       <label>
@@ -55,18 +68,17 @@ function PaymentForm() {
         />
         <span className='form__checkbox-item'></span>
 
-        {kop === 0 ? (
+        {!kop ? (
           <span className='form__text'>
             Я хочу компенсировать комиссию сервиса транзакций {rub} руб., чтобы
             покрыть издержки за перевод средств сотруднику.
           </span>
         ) : (
           <span className='form__text'>
-            Я хочу компенсировать комиссию сервиса транзакций {rub} руб. {kop}
+            Я хочу компенсировать комиссию сервиса транзакций {rub} руб. {kop}{' '}
             коп., чтобы покрыть издержки за перевод средств сотруднику
           </span>
         )}
-        
       </label>
       <p>
         Нажимая на кнопку «Оплатить», вы соглашаетесь с условиями оферты,

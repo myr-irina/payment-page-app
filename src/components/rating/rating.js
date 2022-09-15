@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import RatingIcon from '../rating-icon/rating-icon';
 import './style.css';
 
-function Rating({ onFeedbackOpen, onFeedbackClose }) {
-  const [rating, setRating] = useState(0);
+function Rating({ onFeedbackOpen, onFeedbackClose, rating, setRating }) {
+  // const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
 
   const onMouseEnter = index => {

@@ -9,7 +9,7 @@ function CardList({ setTips }) {
   const [activeButtonValue, setActiveButtonValue] = useState(0);
 
   function handleClick(e) {
-    const buttonValue = +e.target.dataset.value;
+    const buttonValue = e.target.dataset.value;
     setTips(buttonValue);
     setActiveButtonValue(buttonValue);
   }
@@ -38,7 +38,7 @@ function CardList({ setTips }) {
             type='button'
             onClick={handleClick}
           >
-            {numberFormat(value)}
+            {value} &#8381;
           </button>
         </SwiperSlide>
       ))}

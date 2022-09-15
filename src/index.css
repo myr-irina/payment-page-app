@@ -1,26 +1,4 @@
-*::after,
-*::before {
-  box-sizing: border-box;
-  outline: none;
-}
-
-:root {
-  --primary-bg-color: #ffffff ;
-  --secondary-bg-color:#3C3C3C;
-  --button-light-grey: #F5F5F5;
-  --button-navy: #377BFF;
-  --primary-txt-color: #000000;
-  --secondary-txt-color: #ffffff;
-  --main-font: SF Pro Text, Arial, sans-serif;
-  --secondary-font: SF Pro Display, Arial, sans-serif;
-}
-
-body {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
-  font-size: 12px;
-  font-family: var(--main-font);
-  margin: 0;
-  padding: 0;
-}
-
+@import url(./vendor/fonts//fonts.js);
+@import url(./vendor/normalize.css);
+@import url(./style/root.css);
+@import url(./style/page.css);
