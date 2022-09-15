@@ -3,18 +3,16 @@ import './style.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import numberFormat from '../../utils/number-format';
+import { OPTIONS } from '../const';
 
 function CardList({ setTips }) {
   const [activeButtonValue, setActiveButtonValue] = useState(0);
 
   function handleClick(e) {
     const buttonValue = +e.target.dataset.value;
-    console.log({ buttonValue });
     setTips(buttonValue);
     setActiveButtonValue(buttonValue);
   }
-  //вынести в utils const
-  const arr = [100, 250, 500, 1000, 2500];
 
   return (
     <Swiper
@@ -30,7 +28,7 @@ function CardList({ setTips }) {
       }}
       onReachEnd={() => console.log('Swiper end reached')}
     >
-      {arr.map(value => (
+      {OPTIONS.map(value => (
         <SwiperSlide key={`slide-${value}`} style={{ listStyle: 'none' }}>
           <button
             data-value={value}

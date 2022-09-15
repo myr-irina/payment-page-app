@@ -10,4 +10,3 @@
 
 Ссылка на макет [Figma](https://www.figma.com/file/SeM8dwdYZvdfUQMU1mgdjB/Untitled?node-id=0%3A1)
 
-**Скриншоты выполненного тестового задания**

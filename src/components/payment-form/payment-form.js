@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import CardList from '../card-list/card-list';
 import Rating from '../rating/rating';
 import Feedback from '../feedback/feedback';
@@ -11,7 +11,6 @@ import { FEE_RATE } from '../const';
 function PaymentForm() {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   const [tips, setTips] = useState(0);
-  // console.log(numberFormat(tips));
 
   const onMouseClick = () => {
     setIsFeedbackOpen(true);
@@ -25,16 +24,18 @@ function PaymentForm() {
     setTips(0)
   }
   
-  const fee = Math.floor(tips * FEE_RATE);
-
+  const fee = Math.trunc(tips * FEE_RATE);
+  
   return (
-    <form className='form'>
+    <form className='form' type='submit'>
       <div className='input-block'>
         <input className='input-tips'
           type='number'
           value={tips}
-          onChange={e => setTips(e.target.value)}
+          onChange={e => 
+            {setTips(numberFormat(+e.target.value))}}
         />
+        {/* <span className='input-tips__currency'>₽</span> */}
 
         <button type='button' className='close-button' onClick={onCloseButton}>
           <img src={closeBtn} alt='кнопка закрытия' />
@@ -43,7 +44,7 @@ function PaymentForm() {
       <CardList setTips={setTips} />
       <Rating onFeedbackOpen={onMouseClick} onFeedbackClose={onDoubleClick} />
       <Feedback isOpen={isFeedbackOpen} />
-      <ButtonGroup />
+      <ButtonGroup setTips={setTips} />
       <label>
         <input
           className='form__checkbox form__input'

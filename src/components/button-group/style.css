@@ -17,6 +17,7 @@
   margin-bottom: 12px;
   color: var(--primary-bg-color);
   border: 0;
+  cursor: pointer;
 }
 
 .button_type_grey {
@@ -32,6 +33,15 @@
   margin: 0 5px;
   stroke: transparent;
   stroke-width: 0px;
+}
+
+.button_type_clicked {
+  background-color: rgba(55, 123, 255, 0.7)
+}
+
+.button_type_grey_clicked {
+  background-color: rgba(60, 60, 60, 0.7);
+  color: white;
 }
 
 
