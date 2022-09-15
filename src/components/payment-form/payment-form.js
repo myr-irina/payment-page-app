@@ -21,21 +21,23 @@ function PaymentForm() {
   };
 
   const onCloseButton = () => {
-    setTips(0)
-  }
-  
-  const fee = Math.trunc(tips * FEE_RATE);
-  
+    setTips(0);
+  };
+
+  const rub = parseInt(tips * FEE_RATE);
+  const kop = +(((tips * FEE_RATE) % rub) * 100);
+
   return (
     <form className='form' type='submit'>
       <div className='input-block'>
-        <input className='input-tips'
+        <input
+          className='input-tips'
           type='number'
           value={tips}
-          onChange={e => 
-            {setTips(numberFormat(+e.target.value))}}
+          onChange={e => {
+            setTips(+e.target.value);
+          }}
         />
-        {/* <span className='input-tips__currency'>₽</span> */}
 
         <button type='button' className='close-button' onClick={onCloseButton}>
           <img src={closeBtn} alt='кнопка закрытия' />
@@ -52,10 +54,19 @@ function PaymentForm() {
           type='checkbox'
         />
         <span className='form__checkbox-item'></span>
-        <span className='form__text'>
-          Я хочу компенсировать комиссию сервиса транзакций {fee} руб., чтобы
-          покрыть издержки за перевод средств сотруднику
-        </span>
+
+        {kop === 0 ? (
+          <span className='form__text'>
+            Я хочу компенсировать комиссию сервиса транзакций {rub} руб., чтобы
+            покрыть издержки за перевод средств сотруднику.
+          </span>
+        ) : (
+          <span className='form__text'>
+            Я хочу компенсировать комиссию сервиса транзакций {rub} руб. {kop}
+            коп., чтобы покрыть издержки за перевод средств сотруднику
+          </span>
+        )}
+        
       </label>
       <p>
         Нажимая на кнопку «Оплатить», вы соглашаетесь с условиями оферты,
