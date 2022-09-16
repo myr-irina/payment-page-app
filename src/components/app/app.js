@@ -10,7 +10,7 @@ function App() {
         <Header />
         <div className='page__content'>
           <Profile />
-          <PaymentForm/>     
+          <PaymentForm />
         </div>
       </div>
     </div>

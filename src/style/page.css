@@ -1,0 +1,28 @@
+.page {
+  background: var(--primary-bg-color: );
+  color: var(--primary-txt-color);
+  margin: 0;
+  font-family: 'SF Pro Text', 'SF Pro Display', -apple-system,
+    BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.page__container {
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.page__content {
+  flex-grow: 1;
+  width: var(--max-content-width);
+  margin: 0 auto;
+}

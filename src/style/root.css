@@ -8,65 +8,31 @@
   /* main project colors */
   --primary-bg-color: #ffffff ;
   --secondary-bg-color:#3C3C3C;
-  --color-bg-tertiary: #e8e8e8;
+  --tertiary-bg-color: #F5F5F5;
 
-  --button-light-grey: #F5F5F5;
-  --button-navy: #377BFF;
+  --button-color-blue: #377BFF;
+  --button-color-light-blue: rgba(55, 123, 255, 0.7);
+  --button-color-light-grey: rgba(60, 60, 60, 0.7);
 
   --primary-txt-color: #000000;
-  --secondary-txt-color: #ffffff;
-
-  --color-accent-primary: #2be080;
-  --color-accent-secondary: #ee3465;
-  
-
+  --secondary-txt-color: #5E5E5E;
+  --tertiary-txt-color: #FFFFFF;
+  --button-txt-color-dark-grey: #3C3C3C;
+  --button-txt-color-light-grey: #F5F5F5;
+  --link-txt-color: #377BFF;
 
   /* font sizes / letter-spacing */
-  --text-size-xxs: 12px;
-  --text-size-xs: 13px;
+  --text-size-xs: 12px;
   --text-size-s: 14px;
-  --text-size-m: 18px;
-  --text-size-l: 20px;
-  --text-size-xl: 30px;
-  --text-size-xxl: 50px;
-
-  --letter-spacing-tight: -0.04em;
+  --text-size-m: 16px;
+  --text-size-l: 44px;
 
   /* page max and min width / section margins */
-  --max-width: 1280px;
+  --max-width: 479px;
   --max-content-width: calc(var(--max-width) - var(--side-margin-default) * 2);
   --min-width: 320px;
 
-  --side-margin-default: 70px;
-  --side-margin-l: 70px;
-  --side-margin-m: 70px;
-  --side-margin-s: 70px;
-  --side-margin-xs: 70px;
-}
-
-@media screen and (max-width: 1023px) {
-  :root {
-    --text-size-s: 12px;
-    --text-size-xl: 28px;
-    --text-size-xxl: 40px;
-
-    --side-margin-l: 30px;
-    --side-margin-m: 50px;
-    --side-margin-s: 50px;
-    --side-margin-xs: 30px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  :root {
-    --text-size-s: 11px;
-    --text-size-m: 14px;
-    --text-size-l: 18px;
-    --text-size-xl: 18px;
-    --text-size-xxl: 30px;
-
-    --side-margin-m: 18px;
-    --side-margin-s: 14px;
-    --side-margin-xs: 10px;
-  }
+  --side-margin-default: 24px;
+  --side-margin-m: 21px;
+  --side-margin-s: 18px;
 }
