@@ -1,4 +1,3 @@
-import './style.css';
 import Profile from '../profile/profile';
 import Header from '../header/header';
 import PaymentForm from '../payment-form/payment-form';

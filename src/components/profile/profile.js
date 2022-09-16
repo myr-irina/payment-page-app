@@ -8,11 +8,11 @@ function Profile() {
     <div className='profile'>
       <img className='profile__image' src={photo} alt='фото' />
       <div className='profile__wrapper'>
-        <p className='profile__name'>Артур Гаврилов</p>
         <div className='profile__block'>
-          <p className='profile__position'>Работает в компании Premier Tips</p>
+          <p className='profile__name'>Артур Гаврилов</p>
           <img src={mark} alt='галочка' />
         </div>
+        <p className='profile__position'>Работает в компании Premier Tips</p>
         <p className='profile__desc'>Собираю на новый Genesis G90!</p>
       </div>
     </div>

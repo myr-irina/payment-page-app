@@ -5,7 +5,7 @@
   align-items: center;
   wrap: no-wrap;
   height: 44px;
-  margin: 26px 0 auto;
+  margin: 26px 0 26px 0;
   width: 100%;
   list-style: none;
   padding: 0;
@@ -14,11 +14,11 @@
 .card-list__card {
   width: 66px;
   height: 44px;
-  background: var(--button-light-grey);
+  background: var(--tertiary-bg-color);
   border: 0;
-  padding: 13px 11px;
   cursor: pointer;
   margin-right: 16px;
+  border-radius: 4px;
 }
 
 .card_type_clicked {

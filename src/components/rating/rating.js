@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import RatingIcon from '../rating-icon/rating-icon';
 import './style.css';
 
-function Rating({ onFeedbackOpen, onFeedbackClose, rating, setRating }) {
-  // const [rating, setRating] = useState(0);
-  const [hoverRating, setHoverRating] = useState(0);
-
+function Rating({
+  onFeedbackOpen,
+  onFeedbackClose,
+  rating,
+  setRating,
+  hoverRating,
+  setHoverRating,
+}) {
   const onMouseEnter = index => {
     setHoverRating(index);
   };
-  const onMouseLeave = () => {
-    setHoverRating(0);
+  const onMouseLeave = index => {
+    setHoverRating(index);
+    setRating(index);
   };
 
   const onSaveRating = index => {

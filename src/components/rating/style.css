@@ -3,27 +3,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 26px auto 12px;
+  margin: 0 auto 12px;
   width: 100%;
   cursor: pointer;
 }
-
-/* .rating__button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  width: 55px;
-  height: 55px;
-  background: url('./../../images/star.svg') center no-repeat;
-}
-
-.on {
-  background: url('./../../images/star-checked.svg') center no-repeat;
-}
-.off {
-  background: url('./../../images/star.svg') center no-repeat;
-} */
 
 .rating__stars {
   position: relative;
@@ -62,17 +45,3 @@
   margin-right: 0;
 }
 
-/* .form__rating-input:checked,
-.form__rating-label .form__star-image,
-.form__rating-input:focus,
-.form__rating-label .form__star-image,
-.form__rating-label:hover .form__star-image,
-.form__rating-label:hover,
-.form__rating-label .form__star-image {
-  fill: #ff9000;
-}
-.form__star-image {
-  fill: #c7c7c7;
-  -webkit-transition: fill 0.3s;
-  transition: fill 0.3s;
-} */

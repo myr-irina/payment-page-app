@@ -5,13 +5,15 @@ import Feedback from '../feedback/feedback';
 import ButtonGroup from '../button-group/button-group';
 import './style.css';
 import closeBtn from './../../images/close-button.svg';
-import numberFormat from './../../utils/number-format';
 import { FEE_RATE } from '../const';
 
 function PaymentForm() {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   const [tips, setTips] = useState('0');
   const [rating, setRating] = useState(0);
+  const [hoverRating, setHoverRating] = useState(0);
+  const [text, setText] = useState('');
+  const [activeButtonValue, setActiveButtonValue] = useState(0);
 
   const onMouseClick = () => {
     setIsFeedbackOpen(true);
@@ -29,7 +31,10 @@ function PaymentForm() {
     e.preventDefault();
     setTips('0');
     setRating(0);
+    setHoverRating(0);
     onDoubleClick();
+    setText('');
+    setActiveButtonValue(0)
   };
 
   const rub = parseInt(tips * FEE_RATE);
@@ -57,8 +62,12 @@ function PaymentForm() {
         onFeedbackClose={onDoubleClick}
         rating={rating}
         setRating={setRating}
+        hoverRating={hoverRating}
+        setHoverRating={setHoverRating}
+        activeButtonValue={activeButtonValue}
+        setActiveButtonValue={setActiveButtonValue}
       />
-      <Feedback isOpen={isFeedbackOpen} />
+      <Feedback isOpen={isFeedbackOpen} text={text} setText={setText} />
       <ButtonGroup setTips={setTips} />
       <label>
         <input

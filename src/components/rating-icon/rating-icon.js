@@ -34,8 +34,8 @@ function RatingIcon(props) {
   return (
     <div
       className='rating-icon'
-      // onMouseEnter={() => onMouseEnter(index)}
-      // onMouseLeave={() => onMouseLeave()}
+      onMouseEnter={() => onMouseEnter(index)}
+      onMouseLeave={() => onMouseLeave(index)}
       onClick={() => {
         onSaveRating(index);
         onOpen();
