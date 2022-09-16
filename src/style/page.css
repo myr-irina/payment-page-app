@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -24,11 +25,5 @@
 .page__content {
   flex-grow: 1;
   width: var(--max-content-width);
-  margin: 0 auto;
 }
 
-@media screen and (min-width: 320px) {
-  .page__content {
-    /* width: var(--min-content-width); */
-  }
-}
