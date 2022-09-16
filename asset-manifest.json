@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/payment-page-app/static/css/main.1e08c7b8.css",
+    "main.css": "/payment-page-app/static/css/main.3c823aa7.css",
     "main.js": "/payment-page-app/static/js/main.66f2639d.js",
     "static/media/SF-Pro-Text-Semibold.otf": "/payment-page-app/static/media/SF-Pro-Text-Semibold.e16deadd9dc50f769f31.otf",
     "static/media/SF-Pro-Text-Medium.otf": "/payment-page-app/static/media/SF-Pro-Text-Medium.eec811a8c90a516708ea.otf",
@@ -21,11 +21,11 @@
     "static/media/close-button.svg": "/payment-page-app/static/media/close-button.6c4f8af1c8f34e7e9208a9e1bdf34f37.svg",
     "static/media/mark.svg": "/payment-page-app/static/media/mark.b8b94ddffa61b988e1c51d02fe714b6b.svg",
     "static/media/star-checked.svg": "/payment-page-app/static/media/star-checked.31d6cfe0d16ae931b73c.svg",
-    "main.1e08c7b8.css.map": "/payment-page-app/static/css/main.1e08c7b8.css.map",
+    "main.3c823aa7.css.map": "/payment-page-app/static/css/main.3c823aa7.css.map",
     "main.66f2639d.js.map": "/payment-page-app/static/js/main.66f2639d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e08c7b8.css",
+    "static/css/main.3c823aa7.css",
     "static/js/main.66f2639d.js"
   ]
 }
