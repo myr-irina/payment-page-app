@@ -6,6 +6,7 @@ import ButtonGroup from '../button-group/button-group';
 import './style.css';
 import closeBtn from './../../images/close-button.svg';
 import { FEE_RATE } from '../const';
+import CurrencyInput from 'react-currency-input-field';
 
 function PaymentForm() {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
@@ -43,16 +44,19 @@ function PaymentForm() {
   return (
     <form className='form' type='submit' onSubmit={onFormSubmit}>
       <div className='input-block'>
-        <input
+   
+        <CurrencyInput
           className='input-tips'
-          type='text'
-          value={tips.includes('₽') ? tips : `${tips} ₽`}
-          onChange={e => {
-            setTips(e.target.value);
-          }}
+          value={tips}
           placeholder='0 ₽'
+          defaultValue={0}
+          decimalsLimit={0}
+          onValueChange={(value) => setTips(value)}
+          suffix=' ₽'
+          disableGroupSeparators
+   
         />
-
+        
         <button type='button' className='close-button' onClick={onCloseButton}>
           <img src={closeBtn} alt='кнопка закрытия' />
         </button>

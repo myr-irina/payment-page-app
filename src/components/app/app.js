@@ -3,6 +3,7 @@ import Header from '../header/header';
 import PaymentForm from '../payment-form/payment-form';
 
 function App() {
+  
   document.addEventListener(
     'touchmove',
     function (event) {
