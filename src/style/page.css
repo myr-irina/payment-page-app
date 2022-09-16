@@ -1,7 +1,3 @@
-body {
-  touch-action: pan-x pan-y;
-}
-
 .page {
   background: var(--primary-bg-color: );
   color: var(--primary-txt-color);
