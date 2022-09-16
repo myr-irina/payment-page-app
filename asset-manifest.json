@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/payment-page-app/static/css/main.d181add1.css",
+    "main.js": "/payment-page-app/static/js/main.7308d43f.js",
+    "static/media/SF-Pro-Text-Semibold.otf": "/payment-page-app/static/media/SF-Pro-Text-Semibold.e16deadd9dc50f769f31.otf",
+    "static/media/SF-Pro-Text-Medium.otf": "/payment-page-app/static/media/SF-Pro-Text-Medium.eec811a8c90a516708ea.otf",
+    "static/media/SF-Pro-Text-Thin.otf": "/payment-page-app/static/media/SF-Pro-Text-Thin.e152bbce1f8c93322e6b.otf",
+    "static/media/SF-Pro-Text-Regular.otf": "/payment-page-app/static/media/SF-Pro-Text-Regular.ba21d41dbb34b2e04643.otf",
+    "static/media/SFProDisplay-Regular.eot": "/payment-page-app/static/media/SFProDisplay-Regular.ea1b407b07b1c65ddb67.eot",
+    "static/media/SFProDisplay-Regular.ttf": "/payment-page-app/static/media/SFProDisplay-Regular.6b109fecbc7563467e36.ttf",
+    "static/media/SFProDisplay-Regular.woff": "/payment-page-app/static/media/SFProDisplay-Regular.7ee14c637e39445d7093.woff",
+    "static/media/photo.svg": "/payment-page-app/static/media/photo.1d199026d209e029d514f8de975fe4b7.svg",
+    "static/media/sbp-icon.svg": "/payment-page-app/static/media/sbp-icon.6998528f9bbd89d15783aa7891aedf74.svg",
+    "static/media/wifi.svg": "/payment-page-app/static/media/wifi.e358393f24187038953cd7a3cc52691a.svg",
+    "static/media/mobile-signal.svg": "/payment-page-app/static/media/mobile-signal.df4584564af6f0016be4f4812df5dd2e.svg",
+    "static/media/star.svg": "/payment-page-app/static/media/star.dc6862a7433a44cd649c.svg",
+    "static/media/battery.svg": "/payment-page-app/static/media/battery.26a46026ff3465b16a973473e2c422b1.svg",
+    "index.html": "/payment-page-app/index.html",
+    "static/media/checkbox.svg": "/payment-page-app/static/media/checkbox.cfee3e40238917228b8b.svg",
+    "static/media/checkbox-checked.svg": "/payment-page-app/static/media/checkbox-checked.2513c0b9265076bd151a.svg",
+    "static/media/close-button.svg": "/payment-page-app/static/media/close-button.6c4f8af1c8f34e7e9208a9e1bdf34f37.svg",
+    "static/media/mark.svg": "/payment-page-app/static/media/mark.b8b94ddffa61b988e1c51d02fe714b6b.svg",
+    "static/media/star-checked.svg": "/payment-page-app/static/media/star-checked.31d6cfe0d16ae931b73c.svg",
+    "main.d181add1.css.map": "/payment-page-app/static/css/main.d181add1.css.map",
+    "main.7308d43f.js.map": "/payment-page-app/static/js/main.7308d43f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d181add1.css",
+    "static/js/main.7308d43f.js"
+  ]
+}
