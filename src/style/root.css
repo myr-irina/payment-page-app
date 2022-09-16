@@ -90,9 +90,3 @@
     --max-width: 370px;
   }
 }
-/* 
-@media screen and (max-width: 330px) {
-  :root {
-    --max-width: 360px;
-  }
-} */
