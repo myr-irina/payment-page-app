@@ -11,8 +11,9 @@
   --tertiary-bg-color: #F5F5F5;
 
   --button-color-blue: #377BFF;
-  --button-color-light-blue: rgba(55, 123, 255, 0.7);
-  --button-color-light-grey: rgba(60, 60, 60, 0.7);
+  --button-color-light-grey: #F5F5F5;
+  --button-color-light-blue-clicked: rgba(55, 123, 255, 0.7);
+  --button-color-light-grey-clicked: rgba(60, 60, 60, 0.7);
 
   --primary-txt-color: #000000;
   --secondary-txt-color: #5E5E5E;

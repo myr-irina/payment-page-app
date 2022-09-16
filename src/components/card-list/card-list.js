@@ -11,7 +11,7 @@ function CardList({ setTips, activeButtonValue, setActiveButtonValue }) {
     const buttonValue = e.target.dataset.value;
     console.log({ buttonValue });
     setTips(buttonValue);
-    setActiveButtonValue(+buttonValue);
+    setActiveButtonValue(buttonValue);
   }
 
   return (

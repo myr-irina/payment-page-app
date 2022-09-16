@@ -34,7 +34,7 @@ function PaymentForm() {
     setHoverRating(0);
     onDoubleClick();
     setText('');
-    setActiveButtonValue(0)
+    setActiveButtonValue(0);
   };
 
   const rub = parseInt(tips * FEE_RATE);
@@ -56,7 +56,11 @@ function PaymentForm() {
           <img src={closeBtn} alt='кнопка закрытия' />
         </button>
       </div>
-      <CardList setTips={setTips} />
+      <CardList
+        setTips={setTips}
+        activeButtonValue={activeButtonValue}
+        setActiveButtonValue={setActiveButtonValue}
+      />
       <Rating
         onFeedbackOpen={onMouseClick}
         onFeedbackClose={onDoubleClick}
@@ -64,18 +68,13 @@ function PaymentForm() {
         setRating={setRating}
         hoverRating={hoverRating}
         setHoverRating={setHoverRating}
-        activeButtonValue={activeButtonValue}
-        setActiveButtonValue={setActiveButtonValue}
       />
       <Feedback isOpen={isFeedbackOpen} text={text} setText={setText} />
       <ButtonGroup setTips={setTips} />
-      <label>
-        <input
-          className='form__checkbox form__input'
-          id='checkbox-input'
-          type='checkbox'
-        />
-        <span className='form__checkbox-item'></span>
+
+      <input className='custom-checkbox' id='checkbox-input' type='checkbox' />
+      <label className='form__field' htmlFor='checkbox-input'>
+        {/* <span className='form__checkbox-item'></span> */}
 
         {!kop ? (
           <span className='form__text'>
@@ -89,10 +88,13 @@ function PaymentForm() {
           </span>
         )}
       </label>
-      <p>
-        Нажимая на кнопку «Оплатить», вы соглашаетесь с условиями оферты,
-        политикой безопасности платежей, согласием на обработку персональных
-        данных, противодействием терроризму.
+
+      <p className='form__text'>
+        Нажимая на кнопку «Оплатить», вы соглашаетесь с условиями&nbsp;
+        <a className='form__link' href='https://www.google.com/' target='_blank' rel='noopener noreferrer'>
+          оферты, политикой безопасности платежей, согласием на обработку
+          персональных данных, противодействием терроризму.
+        </a>
       </p>
     </form>
   );

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-top: 24px;
+  padding: 0;
 }
 
 .button-group__button {
@@ -11,17 +11,19 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: var(--button-navy);
+  background: var(--button-color-blue);
   border-radius: 4px;
   height: 44px;
   margin-bottom: 12px;
-  color: var(--primary-bg-color);
+  color: var(--tertiary-txt-color);
   border: 0;
   cursor: pointer;
+  font-size: var(--text-size-xs);
+  padding: 0;
 }
 
 .button_type_grey {
-  background: var(--button-light-grey);
+  background: var(--button-color-light-grey);
   color: var(--primary-text-color);
 }
 

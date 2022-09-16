@@ -37,7 +37,7 @@
   position: absolute;
   top: 50%;
   right: 0%;
-  transform:translateY(-50%);
+  transform: translateY(-50%);
   background-color: transparent;
   outline: none;
   border: none;
@@ -60,4 +60,49 @@ input[type='number']:focus {
   position: absolute;
   left: 150px;
   font-size: 3.6rem;
+}
+
+.form__text {
+  font-size: var(--text-size-xs);
+  font-weight: 200;
+  line-height: 16px;
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + label {
+  display: inline-flex;
+  align-items: flex-start;
+  user-select: none;
+}
+
+.custom-checkbox + label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid var(--button-color-blue);
+  border-radius: 2px;
+  margin-right: 12px;
+  background-size: 50% 50%;
+  border: 0;
+  outline: none;
+  background: url('./../../images/checkbox.svg') center no-repeat;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked + label::before {
+  background: url('./../../images/checkbox-checked.svg') center no-repeat;
+  cursor: pointer;
+}
+
+.form__link {
+  color: var(--link-txt-color);
+  text-decoration: none;
 }
