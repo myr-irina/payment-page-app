@@ -19,6 +19,7 @@
   cursor: pointer;
   margin-right: 16px;
   border-radius: 4px;
+  font-size: var(--text-size-s);
 }
 
 .card_type_clicked {
@@ -40,4 +41,10 @@
 .swiper-wrapper {
   padding-inline-start: 0;
   list-style: none;
+}
+
+@media screen and (max-width: 350px) {
+  .card-list__card {
+    width: 60px;
+  }
 }

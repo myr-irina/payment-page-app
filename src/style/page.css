@@ -2,8 +2,8 @@
   background: var(--primary-bg-color: );
   color: var(--primary-txt-color);
   margin: 0;
-  font-family: 'SF Pro Text', -apple-system,
-    BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto,
+    'Segoe UI', Helvetica, Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -25,4 +25,10 @@
   flex-grow: 1;
   width: var(--max-content-width);
   margin: 0 auto;
+}
+
+@media screen and (min-width: 320px) {
+  .page__content {
+    /* width: var(--min-content-width); */
+  }
 }

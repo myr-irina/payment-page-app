@@ -13,22 +13,22 @@ function RatingIcon(props) {
     onDoubleClick,
   } = props;
 
-  const fill = React.useMemo(() => {
+  const svgData = React.useMemo(() => {
     if (hoverRating >= index) {
-      return '#377BFF';
+      return {
+        fill: '#377BFF',
+        stroke: 'none',
+      };
     } else if (!hoverRating && rating >= index) {
-      return '#377BFF';
+      return {
+        fill: '#377BFF',
+        stroke: 'none',
+      };
     }
-    return 'none';
-  }, [rating, hoverRating, index]);
-
-  const stroke = React.useMemo(() => {
-    if (hoverRating >= index) {
-      return 'none';
-    } else if (!hoverRating && rating >= index) {
-      return 'none';
-    }
-    return '#BCBCBC';
+    return {
+      fill: 'none',
+      stroke: '#BCBCBC',
+    };
   }, [rating, hoverRating, index]);
 
   return (
@@ -42,7 +42,7 @@ function RatingIcon(props) {
       }}
       onDoubleClick={onDoubleClick}
     >
-      <StarIcon fill={fill} stroke={stroke} />
+      <StarIcon svgData={svgData} />
     </div>
   );
 }

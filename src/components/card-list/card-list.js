@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { OPTIONS } from '../const';
 
 function CardList({ setTips, activeButtonValue, setActiveButtonValue }) {
-  // const [activeButtonValue, setActiveButtonValue] = useState(0);
-
   function handleClick(e) {
     const buttonValue = e.target.dataset.value;
-    console.log({ buttonValue });
     setTips(buttonValue);
-    setActiveButtonValue(buttonValue);
+    setActiveButtonValue(+buttonValue);
   }
 
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
-function StarIcon(props) {
-  const { fill = 'none', stroke = '#BCBCBC'} = props;
+function StarIcon({svgData}) {
+  const { fill = 'none', stroke = '#BCBCBC'} = svgData;
 
   return (
     <svg

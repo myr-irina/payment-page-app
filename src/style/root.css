@@ -22,7 +22,7 @@
   --button-txt-color-light-grey: #F5F5F5;
   --link-txt-color: #377BFF;
 
-  /* font sizes / letter-spacing */
+  /* font sizes */
   --text-size-xs: 12px;
   --text-size-s: 14px;
   --text-size-m: 16px;
@@ -30,10 +30,36 @@
 
   /* page max and min width / section margins */
   --max-width: 375px;
-  --max-content-width: calc(var(--max-width) - var(--side-margin-default) * 2);
+  --max-content-width: calc(var(--max-width) - var(--side-margin-default) * 2); 
   --min-width: 320px;
 
   --side-margin-default: 24px;
   --side-margin-m: 21px;
-  --side-margin-s: 18px;
+  --side-margin-s: 18px;  
+}
+
+@media screen and (max-width: 357px) {
+  :root {
+    --text-size-xs: 11px;
+    --text-size-s: 12px;
+    --text-size-m: 14px;
+    --text-size-l: 35px;
+
+    --side-margin-m: 18px;
+    --side-margin-s: 14px;
+    --side-margin-xs: 10px;
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  :root {
+    --max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  :root {
+    --max-width: 325px;
+  }
 }

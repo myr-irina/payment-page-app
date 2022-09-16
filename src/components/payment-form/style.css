@@ -33,6 +33,11 @@
   font-family: 'SF Pro Display';
 }
 
+.input-tips::placeholder {
+  color: var(--button-txt-color-light-grey);
+  font-size: var(--text-size-l);
+}
+
 .close-button {
   position: absolute;
   top: 50%;

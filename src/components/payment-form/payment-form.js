@@ -9,7 +9,7 @@ import { FEE_RATE } from '../const';
 
 function PaymentForm() {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
-  const [tips, setTips] = useState('0');
+  const [tips, setTips] = useState('');
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
   const [text, setText] = useState('');
@@ -24,12 +24,12 @@ function PaymentForm() {
   };
 
   const onCloseButton = () => {
-    setTips('0');
+    setTips('');
   };
 
   const onFormSubmit = e => {
     e.preventDefault();
-    setTips('0');
+    setTips('');
     setRating(0);
     setHoverRating(0);
     onDoubleClick();
@@ -50,6 +50,7 @@ function PaymentForm() {
           onChange={e => {
             setTips(e.target.value);
           }}
+          placeholder='0 ₽'
         />
 
         <button type='button' className='close-button' onClick={onCloseButton}>
@@ -74,8 +75,6 @@ function PaymentForm() {
 
       <input className='custom-checkbox' id='checkbox-input' type='checkbox' />
       <label className='form__field' htmlFor='checkbox-input'>
-        {/* <span className='form__checkbox-item'></span> */}
-
         {!kop ? (
           <span className='form__text'>
             Я хочу компенсировать комиссию сервиса транзакций {rub} руб., чтобы
@@ -91,7 +90,12 @@ function PaymentForm() {
 
       <p className='form__text'>
         Нажимая на кнопку «Оплатить», вы соглашаетесь с условиями&nbsp;
-        <a className='form__link' href='https://www.google.com/' target='_blank' rel='noopener noreferrer'>
+        <a
+          className='form__link'
+          href='https://www.google.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           оферты, политикой безопасности платежей, согласием на обработку
           персональных данных, противодействием терроризму.
         </a>
